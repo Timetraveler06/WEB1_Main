@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransactionHome</title>
+    <link rel="stylesheet" href="TrasactionHome.css">
+</head>
+<body>
+    <div class="contentWrapper">
+      <header class="main_header">
+        <div class="hmenu" id="hmenu">
+          <div class="barOne bar"></div>
+          <div class="barTwo bar"></div>
+          <div class="barThree bar"></div>
+        </div>
+        <p class="autoOasis">
+          <a href="#" class="autoLink">Auto Oasis</a>
+        </p>
+        <nav class="navBar_links" id="navLinks">
+          <a class="deposit" onclick="Deposit()">Deposit</a>
+          <a class="withdrawal" onclick="Withdrawal()" >Withdrawal</a>
+          <a href="#">Account Overview</a>
+         
+        </nav>
+      </header>
+ <!-- 
+          <div class="nav-bar">
+          <div class="name">Auto Oasis</div>
+           <div class="nav-links">
+             <nav>
+               <ul id="menuList">
+                <li><a class="deposit" onclick="Deposit()">Deposit</a></li>
+                <li><a class="withdrawal" onclick="Withdrawal()" >Withdrawal</a></li>
+                <li><a href="#">Account Overview</a></li>
+               </ul>
+              </nav>
+           </div>
+        
+            <a id= "menuBtn" class="HomeIcon"><img src="HomeIcon.png" alt="Back"></a>
+           </div>   -->
+   <div class="main-body">
+       
+
+<div class="deposit-card">
+  <div class="card-front">
+    <div class="card-header">
+      <h2>Deposit</h2>
+    </div>
+    <div class="card-body">
+      <div class="deposit-screen">
+        $0
+      </div>
+      <h3>Amount</h3>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="number" id="deposit-amount" class="form-control" placeholder="Enter deposit amount">
+       
+      </div>
+      <select id="currency-selector" onchange="updateCurrencySymbol()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="Birr">Br</option>
+      </select>
+      <button id="enter-btn" class="btn btn-primary" >Enter</button>
+    </div>
+  </div>
+  <div class="card-back">
+    <h2>Deposit Successful</h2>
+  </div>
+</div>
+
+
+
+<div class="withdrawal-card">
+  <div class="front">
+    <div class="balance">
+     <p>Balance</p>
+     <p>2340</p>
+    </div>
+     <h3>Withdrawal methods</h3>
+     <div class="withdrawal-method" id="bank-transfer">
+      <label>
+        <input type="radio" name="withdrawal-method" />
+        <img src="bank-transfer-icon.png" alt="Bank Transfer" />
+        <span class="bank-text">Using Bank</span>
+      </label>
+      <img src="dropdown1.png" alt="" class="dropDown-withdrawal">
+      <div class="additional-info" id="bank-transfer-additional-info" style="display: none;">
+         
+        <div class="logo-container">
+          <img src="Awashlogo.jpeg" alt="" class="AwashLogo" onclick="showOptions('awash-options')"/>
+          <div class="options-container" id="awash-options">
+              <label for="awash-amount">Amount:</label>
+              <input type="number" id="awash-amount" name="awash-amount">
+  
+              <label for="awash-currency">Currency:</label>
+              <select id="awash-currency" name="awash-currency">
+                <option value="Br">Birr</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  
+              </select>
+          </div>
+      </div>
+      <div class="logo-container">
+          <img src="DashenLogo.jpeg" alt="" class="DashenLogo" onclick="showOptions('dashen-options')"/>
+          <div class="options-container" id="dashen-options">
+              <label for="dashen-amount">Amount:</label>
+              <input type="number" id="dashen-amount" name="dashen-amount">
+  
+              <label for="dashen-currency"> Currency:</label>
+              <select id="dashen-currency" name="dashen-currency">
+                <option value="Br">Birr</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+          </div>
+      </div>
+      <div class="logo-container">
+          <img src="CBElogo.jpeg" alt="" class="CbeLogo" onclick="showOptions('cbe-options')"/>
+          <div class="options-container" id="cbe-options">
+              <label for="cbe-amount">Amount:</label>
+              <input type="number" id="cbe-amount" name="cbe-amount">
+  
+              <label for="cbe-currency"> Currency:</label>
+              <select id="cbe-currency" name="cbe-currency">
+                <option value="Br">Birr</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+          </div>
+      </div>
+      </div>
+    </div>
+    
+    
+      
+
+
+      <div class="withdrawal-method" id="transfer-mastercard">
+        <label>
+          <input type="radio" name="withdrawal-method" />
+          <img src="transfer-mastercard-icon.png" alt="Transfer Mastercard" />
+          <span class="bank-text">Mastercard</span>
+        </label>
+        <img src="dropdown1.png" alt="" class="dropDown-withdrawal">
+        <div class="additional-info" id="transfer-master-account additional-info"></div>
+
+      </div>
+
+     
+      <div class="withdrawal-method" id="credit-debit-card">
+        <label>
+          <input type="radio" name="withdrawal-method" />
+          <img src="credit-debit-card-icon.png" alt="Credit/Debit Card" />
+          <span class="bank-text">Using Credit Card </span>
+        </label>
+        <img src="dropdown1.png" alt="" class="dropDown-withdrawal">
+
+        <div class="additional-info" id="credit-debit-card additional-info"></div>
+      
+    </div>
+
+    <button id="continue">Continue</button>
+  </div>
+   
+  <div class="back">
+    <p>Authentication:</p>
+    <p>Enter the 6-digit code:</p>
+    <input type="text" id="verification-code" />
+    <button id="continue-btn">Continue</button>
+  </div>
+
+</div>
+
+
+
+
+
+     <div class="CurrentBalanceCard">
+       <div class="CardHeader">
+        <h3>Available Balance</h3>
+       <div class="drop-down" id="menu">
+        <a class="dropbtn" id="dropdown-trigger"><img src="Dots.png" alt="Wallet Image"></a>
+        <div class="dropdown-content">
+          <a href="#">View Account Details</a>
+          <a href="#">View Balance Details</a>
+        
+        </div>
+      </div>
+       </div>
+        <div class="CardBody">
+          <p class="balance-amount" id="available-balance">$143,124</p>
+          <a href="#">View Transactions</a>
+        
+     </div>
+  </div>
+  
+    
+
+
+  <div class="PayOutCard">
+    <div class="CardHeader">
+      <!-- Header content -->
+    </div>
+    <div class="CardBody">
+      <div class="Money">
+        <div class="graph-container">
+          <canvas id="paid-chart"></canvas>
+        </div>
+        <p class="paid">Paid</p>
+        <p class="PaidMoney" id="paid-amount"></p>
+      </div>
+      <div class="Money">
+        <div class="graph-container">
+          <canvas id="pending-chart"></canvas>
+        </div>
+        <p class="pending">Pending</p>
+        <p class="PendingMoney" id="pending-amount"></p>
+      </div>
+      <div class="Transaction">
+        <!-- Transaction content -->
+      </div>
+    </div>
+  </div>
+  
+  
+
+     
+
+
+  <div class="transaction-history-card">
+    <div class="card-header">
+   <h3>Cash Out Trasnactions</h3>
+   <div class="dropdown">
+     <button class="dropbtn">Sort by Date</button>
+     <div class="dropdown-content">
+       <a href="#" class="sort" data-sort="date" data-order="asc">Ascending</a>
+       <a href="#" class="sort" data-sort="date" data-order="desc">Descending</a>
+     </div>
+   </div>
+ </div>
+    <div class="card-body">
+   <table class="transaction-table">
+     <thead>
+       <tr>
+         <th>Type</th>
+         <th>Date</th>
+         <th>Transaction ID</th>
+         <th>Amount</th>
+         <th>Status</th>
+       </tr>
+     </thead>
+     <tbody class="list">
+       <tr class="RowOne">
+         <td class="type" id="type">Deposit</td>
+         <td id="date">2023-04-28</td>
+         <td id="trasId">123456789</td>
+         <td id="amount">$100.00</td>
+         <td class="completed" id="completed">Completed</td>
+       </tr>
+       <tr>
+         <td class="type" id="type" >Withdrawal</td>
+         <td id="date">2023-04-30</td>
+         <td id="trasId">987654321</td>
+         <td id="amount">$50.00</td>
+         <td class="processing" id="processing" >Processing</td>
+       </tr>
+     </tbody>
+   </table>
+ </div> 
+</div>
+
+</div>
+</div>
+         
+
+
+
+
+
+
+
+
+
+
+  </div>  
+   
+   
+     
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const navBtn = document.getElementById("hmenu");
+  const navList = document.getElementById("navLinks");
+  navBtn.addEventListener("click", () => {
+    navList.classList.toggle("list_activate");
+    navBtn.classList.toggle("btn_Change");
+  });
+</script>
+<script src="TransactionHome.js" ></script>
+
+</html>

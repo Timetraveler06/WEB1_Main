@@ -1,0 +1,906 @@
+
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+.navBar_links {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  left: 2rem;
+  top: 7.5rem;
+  display: none;
+  background-color: navajowhite;
+  border-radius: 1.5rem;
+  transition: all 300ms linear;
+  width: 90%;
+  transition: all 300ms linear;
+}
+
+.autoOasis a {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-decoration: none;
+  color: blue;
+  transition: all 300ms linear;
+  margin-left: 10rem;
+}
+
+.navBar_links a {
+  width: 100%;
+  display: block;
+  padding: 1rem 0.5rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+  transition: all 300ms linear;
+}
+
+.navBar_links a:hover {
+  background-color: dodgerblue;
+  color: aliceblue;
+  transition: all 300ms linear;
+}
+
+.bar {
+  border: 0.1rem solid darkred;
+  margin-bottom: 0.3rem;
+  height: 0.3rem;
+  
+}
+
+.barOne {
+  width: 3rem;
+  transition: all 200ms linear;
+}
+
+.barTwo {
+  width: 3rem;
+  transition: all 200ms linear;
+}
+
+.barThree {
+  width: 3rem;
+  transition: all 200ms linear;
+}
+
+.hmenu {
+  display: block;
+  position: absolute;
+  left: 2rem;
+  top: 1.8rem;
+  transition: all 300ms linear;
+}
+
+.list_activate {
+  display: flex;
+  transition: all 500ms linear;
+}
+
+.btn_Change .barOne {
+  background-color: darkred;
+  width: 1.9rem;
+  rotate: -35deg;
+  margin: 0.1rem;
+  transition: all 200ms linear;
+}
+
+.btn_Change .barTwo {
+  background-color: darkred;
+  transition: all 200ms linear;
+  margin: 0.1rem;
+}
+
+.btn_Change .barThree {
+  background-color: darkred;
+  width: 1.9rem;
+  rotate: 35deg;
+  margin: 0.1rem;
+  transition: all 200ms linear;
+}
+.main-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.CurrentBalanceCard, .PayOutCard, .transaction-history-card {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.CurrentBalanceCard .CardHeader, .PayOutCard .CardHeader, .transaction-history-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.CurrentBalanceCard .CardBody, .PayOutCard .CardBody, .transaction-history-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.CurrentBalanceCard .CardBody .balance-amount, .PayOutCard .CardBody .PaidMoney, .PayOutCard .CardBody .PendingMoney {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.CurrentBalanceCard .CardBody a, .PayOutCard .CardBody .Transaction a {
+  margin-top: 16px;
+}
+
+.PayOutCard .CardBody .Money {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.PayOutCard .CardBody .Money .paid, .PayOutCard .CardBody .Money .pending {
+  font-weight: bold;
+}
+
+.PayOutCard .CardBody .Transaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-history-card .transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.transaction-history-card .transaction-table thead tr {
+  border-bottom: 2px solid #ddd;
+}
+
+.transaction-history-card .transaction-table thead th {
+  font-weight: bold;
+  padding: 12px 16px;
+}
+
+.transaction-history-card .transaction-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-history-card .transaction-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.transaction-history-card .transaction-table tbody td {
+  padding: 12px 16px;
+}
+
+.transaction-history-card .transaction-table .completed {
+  color: green;
+}
+
+.transaction-history-card .transaction-table .processing {
+  color: orange;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+.dropbtn img {
+  width: 30px; 
+    margin-top: 10px;
+  
+
+}
+
+.dropbtn {
+  
+ 
+  color: white;
+  
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  right: 0;
+  
+  width: 90px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+}
+
+.dropdown-content a {
+
+  color: black;
+  padding: 15px 2px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.CardBody {
+  font-weight: bold;
+  padding-left: 15px;
+}
+.CardBody .balance-amount{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+.CardBody a {
+      
+  text-decoration: none;
+  color: blue;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.CardBody a:hover {
+  text-decoration: underline;
+}
+.PayOutCard {
+  
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+.PayOutCard .CardHeader {
+
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+
+.PayOutCard .Money{
+
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #ccc;
+}
+
+.paid{
+  font-weight: lighter;
+ background-color: rgb(78, 210, 78);
+ border-radius: 10px;
+ padding:10px 15px;
+}
+.pending{
+  font-weight: lighter;
+  background-color: rgb(209, 17, 17);
+  border-radius: 10px;
+  padding:10px 15px;
+}
+#available-balance{
+  padding-right: 20px;
+}
+
+.transaction-history-card {
+ 
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 20px 0px;
+ 
+  border-radius: 10px;
+
+  
+}
+
+.transaction-history-card .card-header {
+ 
+  
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+ 
+ 
+  
+}
+
+.transaction-history-card .card-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight:bold;
+  color: rgb(10, 10, 10);
+}
+
+.transaction-history-card .card-header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.transaction-history-card .card-header .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 0;
+ 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  padding: 6px 0;
+  border-radius: 4px;
+}
+
+.transaction-history-card .card-header .dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+
+.transaction-history-card .card-header button{
+  background-color: #f4f0f0;
+  color: black;
+  font-weight: bolder;
+  padding: 10px;
+}
+.transaction-history-card .card-header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.transaction-history-card .card-body {
+  grid-area: HistoryBody;
+  padding: 20px;
+
+  color: rgb(10, 10, 10);
+}
+   
+ .list .completed{
+  background-color: rgb(78, 210, 78);
+  border-radius: 10px;
+  padding: 2px;
+  
+}
+
+.list .processing{
+  background-color: red;
+  border-radius: 10px;
+  padding: 2px;
+} 
+
+
+/* depost card */
+
+
+
+.deposit-card {
+	display: none;
+	background-color: #110d1f;
+	border: 1px solid #10240e;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+	color: rgb(225, 231, 225);
+	margin:0px 60px;
+	height: 60vh;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+ 
+ position: absolute;
+  top: 20rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+   
+  
+}
+.deposit-card .card-front, .card-back {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }
+  .deposit-card .card-front{
+    
+    z-index: 2;
+  }
+  .deposit-card .card-header {
+	
+	padding: 20px;
+	color: white;
+	
+	
+	
+	border-bottom: 1px solid #ddd;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.deposit-card .card-header h2 {
+	margin: 0;
+	text-align: center;
+	
+}
+
+.deposit-card .card-body {
+	padding: 20px;
+}
+
+.deposit-card .input-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.deposit-card .input-group-addon {
+	padding: 9px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+	color: #555;
+	text-align: center;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.deposit-card .form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+
+
+.deposit-card .btn-primary {
+	text-align: center;
+	padding: 10px 20px;
+	margin-top: 30px;
+	margin-left: 90px;
+	border-radius: 5px;
+	color: white;
+	background-color: rgb(53, 73, 53);
+	border-color: green;
+}
+
+.deposit-card .deposit-screen {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 24px;
+	text-align: center;
+}
+.deposit-card .card-back {
+  z-index: 2;
+    opacity: 1;
+    transition: all 0.5s;
+  transition: opacity 0.5s;
+	
+	transform: rotateY(180deg);
+	
+  }
+ 
+  .withdrawal-card {
+    display: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(15, 14, 14, 0.05);
+    color: rgb(9, 9, 9);
+    margin: 0px 60px;
+  
+    flex-direction: column;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+
+    top:17rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  
+  .withdrawal-card .front,
+  .withdrawal-card .back {
+   width: 60vw;
+    position: absolute;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+    border: 1px solid black;
+  }
+  
+  .withdrawal-card .front {
+    background-color: white;
+    padding: 20px;
+    
+  }
+  .withdrawal-card .inputText{
+  height: 40px;
+  width: 70vw;
+  }
+  .withdrawal-card .balance{
+    display: flex;
+    background-color: rgb(76, 163, 171);
+    border-radius: 10px;
+    justify-content: space-around;
+  }
+  .input-group {
+    display: flex;
+  }
+ 
+  .input-group select {
+    margin-left: 10px;
+  }
+  
+  .withdrawal-method {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgb(226, 224, 224);
+    box-shadow: rgb(226, 224, 224);
+   
+  }
+
+  .withdrawal-method:hover {
+    
+    border: 2px solid blue;
+
+  }
+
+ 
+  
+  #bank-transfer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .withdrawal-details {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+  
+  
+  
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .additional-info img {
+    width: 120px; /* Adjust the image size as desired */
+    height: auto;
+    margin-bottom: 5px;
+  }
+  #bank-transfer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+  #transfer-mastercard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #transfer-master-account{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  #credit-debit-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .withdrawal-details {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+  
+  .dropDown-withdrawal {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .bank-text {
+    margin-left: 5px; 
+    color: #392eb5;
+    font-size: large;
+  }
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    
+  }
+  
+  .additional-info img.AwashLogo {
+    width: 150px; /* Adjust the width as desired */
+    height: auto; /* Maintain aspect ratio */
+    padding: 40px 10px;
+  }
+  
+  .additional-info img.DashenLogo {
+    width: 80px; /* Adjust the width as desired */
+    height: auto; /* Maintain aspect ratio */
+    padding: 40px 10px;
+  }
+  
+  .additional-info img.CbeLogo {
+    width: 100px; /* Adjust the width as desired */
+    height: auto; /* Maintain aspect ratio */
+    padding: 40px 5px;
+  }
+  
+  .options-container {
+    display: none;
+}
+
+
+
+  .withdrawal-card .back {
+    background-color: #d9d9d9;
+    padding: 20px;
+    transform: rotateY(180deg);
+  }
+  
+  .withdrawal-card.flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .withdrawal-card.flipped .back {
+    transform: rotateY(0deg);
+  }
+  
+  
+  
+@media screen and (min-width: 580px) {
+
+  .navBar_links {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      align-items: center;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 1.5rem;
+      transition: all 300ms linear;
+      width: 68%;
+      
+    
+  }
+  .navBar_links a {
+    
+    font-size: 1.6rem;
+    color: #343f33;
+   
+  }
+
+
+  .hmenu {
+      display: none;
+      transition: all 300ms linear;
+
+  }
+
+  .autoOasis a {
+      position: relative;
+      margin-left: 26rem;
+      padding-left: 30px;
+      top: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      text-decoration: none;
+      color: blue;
+     
+      transition: all 300ms linear;
+  }
+  .main-body{
+    margin-top: 7rem;
+  }
+
+}
+@media screen and (min-width: 760px) {
+
+  .hmenu {
+      display: none;
+  }
+
+  .navBar_links {
+      display: flex;
+      flex-direction: row;
+      
+      justify-content: space-evenly;
+      align-items: center;
+     margin-left: 15rem;
+      background-color: white;
+      border-radius: 1.5rem;
+      transition: all 300ms linear;
+  }
+  
+
+  .autoOasis a{
+      position: relative;
+      margin-left: 0%;
+      font-size: 2.3rem;
+      font-weight: 800;
+  }
+  
+  .navBar_links a {
+      width: max-content + 1rem;
+      
+      padding: 2rem 1rem;
+      font-size: 2.1rem;
+      border-radius: 1rem;
+      margin-right: 3rem;
+  }
+  
+  .navBar_links a:hover {
+      background-color: dodgerblue;
+      color: aliceblue;
+      transition: all 300ms linear;
+  }
+  .contentWrapper{
+    flex-direction: row;
+   }
+  .nav-bar {
+    display: flex;
+    width: 15vw;
+    height: 100vh;
+   
+    flex-direction: column;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .HomeIcon {
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  
+  .main-body {
+   
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 5px;
+    /* Ensure that the main content is not covered by the nav-bar */
+     
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: #2e9cca;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-5px);
+  }
+  .withdrawal-card {
+    
+    margin:0px 270px;
+
+  }
+  .graph-container canvas {
+    width: 400%;
+    height: 300%;
+  }
+ 
+  
+}
+@media screen and (min-width: 1080px) {
+
+  .hmenu {
+      display: none;
+  }
+  
+  .navBar_links {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 1rem;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: white;
+      border-radius: 1.5rem;
+      transition: all 300ms linear;
+  }
+  
+  
+  .autoOasis a{
+     padding-left: 1rem;
+      font-size: 3rem;
+      font-weight: 800;
+      position: relative;
+  }
+  
+  .navBar_links a {
+      
+    
+      font-size: 1.8rem;
+      border-radius: 1rem;
+      margin-right: 1rem;
+    
+  }
+  
+  .navBar_links a:hover {
+      background-color: dodgerblue;
+      color: aliceblue;
+      transition: all 300ms linear;
+  }
+  .main-body{
+    margin-top: 7rem;
+  }
+}
+
+ 
