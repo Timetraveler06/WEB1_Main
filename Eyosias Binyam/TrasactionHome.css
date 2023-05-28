@@ -370,8 +370,11 @@
   color: black;
   font-weight: bolder;
   padding: 10px;
+
 }
-.transaction-history-card .card-header .dropdown:hover .dropdown-content {
+.transaction-history-card .card-header  .dropdown-content {
+
+
   display: block;
 }
 
@@ -860,47 +863,82 @@
   
 }
 @media screen and (min-width: 1080px) {
-
   .hmenu {
-      display: none;
-  }
+    display: none;
+}
+.main_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.autoOasis {
+  margin-left: 2rem;
+}
+
+.navBar_links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13rem;
+  margin-left: 2rem;
+}
+
+.navBar_links a {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.main-body {
+ 
+  display:flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 20vw; 
+  padding: 5px;
   
-  .navBar_links {
-      display: flex;
-      flex-direction: row;
-      padding: 1rem 1rem;
-      align-items: center;
-      justify-content: flex-end;
-      background-color: white;
-      border-radius: 1.5rem;
-      transition: all 300ms linear;
-  }
+  /* Ensure that the main content is not covered by the nav-bar */
+   
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background-color: #2e9cca;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+.withdrawal-card {
   
-  
-  .autoOasis a{
-     padding-left: 1rem;
-      font-size: 3rem;
-      font-weight: 800;
-      position: relative;
-  }
-  
-  .navBar_links a {
-      
-    
-      font-size: 1.8rem;
-      border-radius: 1rem;
-      margin-right: 1rem;
-    
-  }
-  
-  .navBar_links a:hover {
-      background-color: dodgerblue;
-      color: aliceblue;
-      transition: all 300ms linear;
-  }
-  .main-body{
-    margin-top: 7rem;
-  }
+  margin:0px 270px;
+
+}
+.graph-container canvas {
+  width: 400%;
+  height: 300%;
+}
+
 }
 
  
