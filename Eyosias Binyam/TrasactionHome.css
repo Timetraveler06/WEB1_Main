@@ -375,7 +375,7 @@
 .transaction-history-card .card-header  .dropdown-content {
 
 
-  display: block;
+  display: none;
 }
 
 .transaction-history-card .card-body {
@@ -708,7 +708,9 @@
     height: 100%;
     width: 100%; /* Adjust height as needed */
   }
-  
+  .dropdown-content{
+    display: none;
+  }
 @media screen and (min-width: 580px) {
 
   .navBar_links {
@@ -863,7 +865,7 @@
     margin:0px 270px;
 
   }
-  .graph-container canvas {
+  .graph-container  {
     width: 100%;
     height: 200%;
   }
@@ -942,9 +944,9 @@ p {
   margin:0px 270px;
 
 }
-.graph-container canvas {
-  width: 300%;
-  height: 300%;
+.graph-container {
+  height: 260%; /* Adjust height as needed */
+  width: 100%;
 }
 
 }
