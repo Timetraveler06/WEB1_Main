@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownContent.classList.toggle('show');
   });
 });
+const goBackBtn = document.getElementById("go-back-btn");
+
+goBackBtn.addEventListener("click", function() {
+  window.location.href = "TransactionHome.html";
+});
+
+
+
+
+
+
+
 
 
 
